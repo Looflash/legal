@@ -4,261 +4,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Looflash — Terms of Use</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #FAFAFA;
-    --surface: #FFFFFF;
-    --text: #16161A;
-    --text-muted: #6E6E76;
-    --border: #E7E7EA;
-    --accent: #FF5C1A;
-    --accent-soft: #FFF1EA;
-    --max-width: 720px;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    line-height: 1.7;
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .wrap {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 64px 24px 96px;
-  }
-
-  header.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 12px;
-    gap: 16px;
-  }
-
-  .brand .mark {
-    font-weight: 800;
-    font-size: 1.05rem;
-    letter-spacing: -0.01em;
-  }
-
-  .brand .mark span { color: var(--accent); }
-
-  .lang-toggle {
-    display: flex;
-    gap: 4px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 3px;
-    background: var(--surface);
-    flex-shrink: 0;
-  }
-
-  .lang-toggle a {
-    padding: 5px 12px;
-    border-radius: 999px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: var(--text-muted);
-  }
-
-  .lang-toggle a.active {
-    background: var(--text);
-    color: #fff;
-  }
-
-  h1.title {
-    font-size: 1.9rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin: 20px 0 4px;
-  }
-
-  .version-tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--text-muted);
-    margin-bottom: 32px;
-  }
-
-  .notice {
-    border-left: 3px solid var(--accent);
-    background: var(--accent-soft);
-    padding: 14px 18px;
-    border-radius: 6px;
-    margin-bottom: 40px;
-  }
-
-  .notice p { margin: 0 0 8px; font-weight: 600; font-size: 0.9rem; }
-  .notice ul { margin: 0; padding-left: 20px; font-size: 0.88rem; }
-  .notice li { margin-bottom: 2px; }
-
-  nav.toc {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 20px 0;
-    margin-bottom: 48px;
-  }
-
-  nav.toc .toc-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-  }
-
-  nav.toc ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px 24px;
-  }
-
-  nav.toc a {
-    color: var(--text);
-    text-decoration: none;
-    font-size: 0.88rem;
-    display: flex;
-    gap: 8px;
-  }
-
-  nav.toc a:hover { color: var(--accent); }
-
-  nav.toc a .n {
-    color: var(--accent);
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: 600;
-  }
-
-  section.clause { margin-bottom: 38px; scroll-margin-top: 24px; }
-
-  .clause-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 6px;
-  }
-
-  section.clause h2 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin: 0 0 12px;
-  }
-
-  section.clause p, section.clause li {
-    font-size: 0.98rem;
-  }
-
-  section.clause ul { padding-left: 20px; margin: 12px 0; }
-  section.clause li { margin-bottom: 8px; }
-
-  mark.todo {
-    background: var(--accent-soft);
-    color: var(--accent);
-    border: 1px dashed var(--accent);
-    border-radius: 4px;
-    padding: 1px 6px;
-    font-weight: 600;
-    font-size: 0.92em;
-  }
-
-  footer {
-    border-top: 1px solid var(--border);
-    padding-top: 24px;
-    margin-top: 32px;
-    font-size: 0.82rem;
-    color: var(--text-muted);
-  }
-
-  a { color: inherit; }
-  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-  @media (max-width: 560px) {
-    .wrap { padding: 40px 18px 64px; }
-    nav.toc ol { grid-template-columns: 1fr; }
-    h1.title { font-size: 1.5rem; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; }
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="wrap">
 
-  <header class="top">
-    <div class="brand"><div class="mark">loof<span>lash</span></div></div>
-    <div class="lang-toggle">
+  <header>
+    <div class="brand">loof<span>lash</span></div>
+    <div class="lang">
       <a href="looflash-kullanim-sozlesmesi-TR.html">TR</a>
       <a href="looflash-terms-of-use-EN.html" class="active">EN</a>
     </div>
   </header>
 
-  <h1 class="title">Terms of Use</h1>
-  <div class="version-tag">v1.0</div>
+  <h1>Terms of Use</h1>
+  <div class="version">v1.0</div>
 
   <div class="notice">
-    <p>⚠️ Fill in before publishing:</p>
-    <ul>
-      <li>Section 1 — Company/developer name</li>
-      <li>Section 11 — Contact email address</li>
-    </ul>
+    <strong>⚠️ Fill in before publishing:</strong>
+    Section 1 — company/developer name · Section 11 — contact email
   </div>
 
-  <nav class="toc">
-    <div class="toc-label">Contents</div>
-    <ol>
-      <li><a href="#sec-1"><span class="n">01</span> Parties and Acceptance</a></li>
-      <li><a href="#sec-2"><span class="n">02</span> Description of Service</a></li>
-      <li><a href="#sec-3"><span class="n">03</span> Account Creation and Use</a></li>
-      <li><a href="#sec-4"><span class="n">04</span> AI-Generated Content</a></li>
-      <li><a href="#sec-5"><span class="n">05</span> Intellectual Property Rights</a></li>
-      <li><a href="#sec-6"><span class="n">06</span> User Obligations</a></li>
-      <li><a href="#sec-7"><span class="n">07</span> Privacy and Data Use</a></li>
-      <li><a href="#sec-8"><span class="n">08</span> Changes and Termination</a></li>
-      <li><a href="#sec-9"><span class="n">09</span> Limitation of Liability</a></li>
-      <li><a href="#sec-10"><span class="n">10</span> Changes to This Agreement</a></li>
-      <li><a href="#sec-11"><span class="n">11</span> Contact</a></li>
-    </ol>
-  </nav>
+  <ul class="toc">
+    <li><a href="#s1">1. Parties and Acceptance</a></li>
+    <li><a href="#s2">2. Description of Service</a></li>
+    <li><a href="#s3">3. Account Creation and Use</a></li>
+    <li><a href="#s4">4. AI-Generated Content</a></li>
+    <li><a href="#s5">5. Intellectual Property Rights</a></li>
+    <li><a href="#s6">6. User Obligations</a></li>
+    <li><a href="#s7">7. Privacy and Data Use</a></li>
+    <li><a href="#s8">8. Changes and Termination</a></li>
+    <li><a href="#s9">9. Limitation of Liability</a></li>
+    <li><a href="#s10">10. Changes to This Agreement</a></li>
+    <li><a href="#s11">11. Contact</a></li>
+  </ul>
 
-  <section class="clause" id="sec-1">
-    <div class="clause-eyebrow">Section 01</div>
-    <h2>Parties and Acceptance</h2>
-    <p>These Terms of Use ("Agreement") govern the rights and obligations between <mark class="todo">[[ENTER YOUR COMPANY/DEVELOPER NAME HERE]]</mark> ("Looflash", "we") and the users ("User", "you") of the Looflash mobile application ("App").</p>
+  <section id="s1">
+    <h2>1. Parties and Acceptance</h2>
+    <p>These Terms of Use ("Agreement") govern the rights and obligations between <mark>[[ENTER YOUR COMPANY/DEVELOPER NAME HERE]]</mark> ("Looflash", "we") and the users ("User", "you") of the Looflash mobile application ("App").</p>
     <p>By downloading, creating an account for, or using the App, you confirm that you have read, understood, and agree to this Agreement. If you do not agree, you should not use the App.</p>
   </section>
 
-  <section class="clause" id="sec-2">
-    <div class="clause-eyebrow">Section 02</div>
-    <h2>Description of Service</h2>
+  <section id="s2">
+    <h2>2. Description of Service</h2>
     <p>Looflash is a mobile application designed to support foreign language vocabulary learning. Users can create and study their own flashcard sets, and may use AI-powered features (e.g., automatic set generation, example sentence generation) to enhance the learning process.</p>
   </section>
 
-  <section class="clause" id="sec-3">
-    <div class="clause-eyebrow">Section 03</div>
-    <h2>Account Creation and Use</h2>
+  <section id="s3">
+    <h2>3. Account Creation and Use</h2>
     <ul>
       <li>Some features of the App may require creating an account or verifying device identity.</li>
       <li>You are responsible for ensuring that the information you provide is accurate and up to date.</li>
@@ -266,9 +59,8 @@
     </ul>
   </section>
 
-  <section class="clause" id="sec-4">
-    <div class="clause-eyebrow">Section 04</div>
-    <h2>AI-Generated Content</h2>
+  <section id="s4">
+    <h2>4. AI-Generated Content</h2>
     <ul>
       <li>Flashcard sets, example sentences, and similar content within the App may be generated automatically using AI services.</li>
       <li>AI-generated content may occasionally be inaccurate, incomplete, or contextually inappropriate. Looflash makes no guarantee regarding the grammatical, semantic, or translation accuracy of generated content.</li>
@@ -276,9 +68,8 @@
     </ul>
   </section>
 
-  <section class="clause" id="sec-5">
-    <div class="clause-eyebrow">Section 05</div>
-    <h2>Intellectual Property Rights</h2>
+  <section id="s5">
+    <h2>5. Intellectual Property Rights</h2>
     <ul>
       <li>The App's design, software, interface, and brand elements belong to Looflash and are protected under copyright, trademark, and other applicable intellectual property laws.</li>
       <li>Rights to the flashcard sets and content you create belong to you; however, you permit this content to be processed (e.g., for syncing, backup, AI processing) as necessary to provide the App's functionality.</li>
@@ -286,9 +77,8 @@
     </ul>
   </section>
 
-  <section class="clause" id="sec-6">
-    <div class="clause-eyebrow">Section 06</div>
-    <h2>User Obligations and Prohibited Uses</h2>
+  <section id="s6">
+    <h2>6. User Obligations and Prohibited Uses</h2>
     <p>You agree not to:</p>
     <ul>
       <li>Use the App for any unlawful, harmful, or unauthorized purpose,</li>
@@ -299,9 +89,8 @@
     <p>Looflash reserves the right to suspend or terminate an account without prior notice in the event of a violation of these obligations.</p>
   </section>
 
-  <section class="clause" id="sec-7">
-    <div class="clause-eyebrow">Section 07</div>
-    <h2>Privacy and Data Use</h2>
+  <section id="s7">
+    <h2>7. Privacy and Data Use</h2>
     <p>The App may process limited device and usage data as necessary to provide and improve the service. This data is used to operate the service, prevent misuse, and enhance the user experience.</p>
     <ul>
       <li>Your data is not sold or rented to third parties for marketing or advertising purposes.</li>
@@ -310,9 +99,8 @@
     </ul>
   </section>
 
-  <section class="clause" id="sec-8">
-    <div class="clause-eyebrow">Section 08</div>
-    <h2>Changes, Suspension, and Termination of Service</h2>
+  <section id="s8">
+    <h2>8. Changes, Suspension, and Termination of Service</h2>
     <ul>
       <li>Looflash reserves the right to modify, temporarily suspend, or permanently discontinue any feature of the App, with or without prior notice.</li>
       <li>The App relies on third-party infrastructure and service providers; Looflash is not liable for service disruptions resulting from outages or changes to these services.</li>
@@ -321,9 +109,8 @@
     </ul>
   </section>
 
-  <section class="clause" id="sec-9">
-    <div class="clause-eyebrow">Section 09</div>
-    <h2>Disclaimer of Warranties and Limitation of Liability</h2>
+  <section id="s9">
+    <h2>9. Disclaimer of Warranties and Limitation of Liability</h2>
     <ul>
       <li>The App is provided "as is" and "as available," without any guarantee of uninterrupted or error-free operation.</li>
       <li>To the maximum extent permitted by applicable law, Looflash shall not be liable for any indirect, incidental, or consequential damages arising from use of the App.</li>
@@ -331,16 +118,14 @@
     </ul>
   </section>
 
-  <section class="clause" id="sec-10">
-    <div class="clause-eyebrow">Section 10</div>
-    <h2>Changes to This Agreement</h2>
+  <section id="s10">
+    <h2>10. Changes to This Agreement</h2>
     <p>Looflash may update this Agreement from time to time. Continuing to use the App after such updates constitutes acceptance of the revised Agreement.</p>
   </section>
 
-  <section class="clause" id="sec-11">
-    <div class="clause-eyebrow">Section 11</div>
-    <h2>Contact</h2>
-    <p>If you have questions about this Agreement or the App, you can reach us at <mark class="todo">[[ENTER YOUR CONTACT EMAIL HERE]]</mark>.</p>
+  <section id="s11">
+    <h2>11. Contact</h2>
+    <p>If you have questions about this Agreement or the App, you can reach us at <mark>[[ENTER YOUR CONTACT EMAIL HERE]]</mark>.</p>
   </section>
 
   <footer>Looflash</footer>
